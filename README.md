@@ -9,7 +9,7 @@ A high-performance, multi-threaded, non-blocking, C++ networking library for Lin
 * Synchronization and mutual exclusion between threads
 * Reactor design pattern to handle high-concurrency service requests
 * Enhanced performance with modern C++ features
-* Stress-test library for various use cases
+* Example library for a test server
 
 ## I/O Multiplexing: Epoll with Level Trigger
 * Use epoll instead of select/pool to avoid max data scan limitations
@@ -30,4 +30,16 @@ A high-performance, multi-threaded, non-blocking, C++ networking library for Lin
 4. Demultiplexer return event to Reactor
 5. Reactor calls the corresponding Event Handler
 
+
+## Usage
+Source and header files are compiled to a .so library in /lib/liblinuxnet.so
+To import the headers and add the shared library to the include path:
+```console
+user@linux-machine:~$ ./autobuild.sh
+```
+To run the test server the links with liblinuxnet.so
+```console
+user@linux-machine:~$ cd example
+user@linux-machine:~$ make testserver
+```
 
