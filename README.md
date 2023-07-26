@@ -11,25 +11,6 @@ A high-performance, multi-threaded, non-blocking, C++ networking library for Lin
 * Enhanced performance with modern C++ features
 * Example library for a test server
 
-## I/O Multiplexing: Epoll with Level Trigger
-* Use epoll instead of select/pool to avoid max data scan limitations
-* Reduce context switch time, threads expense, and copying between user and kernel space
-* Use epoll_ctl to add sockets from concurrent requests, then use highly-efficient epoll_wait to collect events' file descriptors
-* Use a red-black tree to store events to monitor in Epoll
-* Use a doubly linked list to store the list of events to return to clients for epoll_wait
-* Use Level Trigger (LT) to reduce latency in reading data from kernel space and enable cross-platform service
-
-## Non-blocking Event Loop
-
-## Thread Pool Design
-
-## Reactor Design Pattern Workflow
-1. Register Event and Handler
-2. Reactor add/modify/delete event to epoll
-3. Demultiplexer start multi-threaded epoll_wait
-4. Demultiplexer return event to Reactor
-5. Reactor calls the corresponding Event Handler
-
 
 ## Usage
 Source and header files are compiled to a .so library in /lib/liblinuxnet.so
