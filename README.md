@@ -42,4 +42,10 @@ To run the test server the links with liblinuxnet.so
 user@linux-machine:~$ cd example
 user@linux-machine:~$ make testserver
 ```
+![Client-Server TCP Connection Established](https://github.com/chuhan-ouyang/linux-net-lib/assets/112202738/ecb8635f-a5d9-4f7e-957c-4d3f206ef52b)
+Client-Server TCP Connection Established
+![Echo Server: Server Side](https://github.com/chuhan-ouyang/linux-net-lib/assets/112202738/5d750685-344c-49ad-8a74-e960d764ba22)
+Echo Server: Server Side 
+![Echo Server: Client Side](https://github.com/chuhan-ouyang/linux-net-lib/assets/112202738/84131f51-8ff8-4bbc-af64-1103086e75f2)
+Echo Server: Client Side
 
